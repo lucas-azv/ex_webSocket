@@ -9,10 +9,10 @@ import iftm.edu.br.tspi.web_socket_exemplo.websocket.handler.TextoWebSocketHandl
 
 @Configuration
 @EnableWebSocket
-public class WebSocketConfig implements WebSocketConfigurer{
-    
+public class WebSocketConfig implements WebSocketConfigurer {
+
     @Override
-    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry){
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(new TextoWebSocketHandler(), "/ws").setAllowedOrigins("*");
     }
 }
